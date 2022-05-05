@@ -1,27 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenifer Lopez</title>
-</head>
-<header>
-    <h1>Jenifer Lopez</h1>
-</header>
-<body>
-    <ul>
-        <li>Music Career</li>
-        <li>Acting Career</li>
-        <li>Personal Life</li> 
-    </ul>
-    <main>
-        <p>
-            This project will cover one of the most influencial people in history. Somebody who is not only an extreamly talented musician, but also an award winning actress as well. Not to mention a fasion icon as well. This person is Jenifer Lopez. There will be three pages, covering her music career, acting career, and personal life as well. 
-        </p>
-    </main>
-</body>
-<footer>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
 
-</footer>
+    <title>Jennifer Lopez</title>
+</head>
+
+<body>
+    <header class="clearfix">
+        <img id="logoimage" src="images/head.png">
+        <h2>Jennifer Lopez</h2>
+    </header>
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="acting.html">Acting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="music.html">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="images.html">Images</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+
+
+
+        <section>
+            <h1>Jennifer Lopez: A God Among Women</h1>
+        </section>
+
+        <div class="container mt-3">
+            <div class="mt-4 p-5 bg-primary text-white rounded">
+                <h1 id="demo"></h1>
+                <h2>until Jennifer Lopez's Birthday</h2>
+            </div>
+        </div>
+        <p>
+            Jennifer Lynn Lopez (born July 24, 1969), also known as J.Lo, is an American singer, actress, and dancer. In
+            1991, she began appearing as a Fly Girl dancer on In Living Color, where she remained a regular until she
+            decided to pursue an acting career in 1993. For her first leading role in Selena (1997), she became the
+            first Latin actress to earn over US$1 million for a film. She went on to star in Anaconda (1997) and Out of
+            Sight (1998), and established herself as the highest-paid Latin actress in Hollywood.
+        </p>
+        <p>
+            Lopez ventured into the music industry with her debut studio album On the 6 (1999), which helped propel the
+            Latin pop movement in American music, and later starred in the psychological horror The Cell (2000). With
+            the simultaneous release of her second studio album J.Lo and her romantic comedy The Wedding Planner in
+            2001, she became the first woman to have a number-one album and film in the same week. Her 2002 release, J
+            to tha L–O! The Remixes, became the first remix album in history to debut atop the US Billboard 200. Later
+            that year, she released her third studio album, This Is Me.. Then and starred in the film Maid in Manhattan.
+        </p>
+        <p>
+            Lopez is considered a pop culture icon, and is often described as a triple threat entertainer. With a
+            cumulative film gross of US$3.1 billion and estimated global sales of 70 million records, she is considered
+            the most influential Latin entertainer in North America. In 2012, Forbes ranked her the world's most
+            powerful celebrity, and the 38th most powerful woman in the world. Time listed her among their 100 most
+            influential people in the world in 2018. Her most successful singles on the US Billboard Hot 100 include "If
+            You Had My Love", "I'm Real", "Ain't It Funny", "All I Have", and "On the Floor". For her contributions to
+            the recording industry, she has a landmark star on the Hollywood Walk of Fame, and has received the
+            Billboard Icon Award and the Michael Jackson Video Vanguard Award, among other honors. Her other ventures
+            include beauty and clothing lines, fragrances, a production company, and a charitable foundation.
+        </p>
+
+        
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2022 Nathan Cyr</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jul 24, 2022 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
+                + minutes + " minutes " + seconds + " seconds ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+
 </html>

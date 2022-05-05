@@ -1,0 +1,60 @@
+body{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+h1 {
+    font-size: 200%;
+    flex-grow: 1;
+    outline: none;
+}
+.products{
+    flex: 1 1 70vw;
+    margin: 1em;
+}
+.product{
+    display: grid;
+    margin: 1em;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    'thumbnail product-title'
+    'thumbnail product-description'
+    'thumbnail product-price';
+    align-items: center;
+    border: 5px double silver;
+    padding:.5em;
+    border-radius: 10px;
+
+}
+.thumbnail{
+    max-width: 150px;
+    width: 100%;
+    grid-area: thumbnail;
+    align-self: center;
+    justify-self: center;
+    border: 5px double darkgray;
+    box-shadow: 3px 3px 15px 3px grey;
+}
+.product-title{
+    grid-area: product-title;
+}
+.product-description{
+    grid-area: product-description;
+    color: white;
+    font-size: 150%;
+}
+.product-price{
+    grid-area: product-price;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    body{
+        flex-direction: column;
+    }
+    aside, .products {
+        flex: 1 1 100vw;
+    }
+    aside{
+        position: relative;
+    }
+}
